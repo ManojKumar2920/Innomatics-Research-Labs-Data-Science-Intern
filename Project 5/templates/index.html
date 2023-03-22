@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RegEx Clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+      body {
+        background-color: #E5E7E9;
+        font-family: Arial, sans-serif;
+        font-size: 16px; 
+        color: #333;
+      }
+    </style>
+ 
+</head>
+  
+  <body>
+    
+    <center>
+
+    <h1>RegEx Clone</h1>
+    <h4>Author : Manoj Kumar</h4>
+    <h4>Backend Development Project</h4>
+        <form method="POST">
+            <div>
+              <input type="text" autocomplete="off" name="string" class="input" placeholder="Test String">
+
+              <style> 
+                .input {
+                border: none;
+                outline: none;
+                border-radius: 15px;
+                padding: 3em;
+                width:400px;
+                color=#fff;
+                background-color: #34495E  ;
+                box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+                transition: 300ms ease-in-out;
+              }
+              
+              .input:focus {
+                background-color: white;
+                transform: scale(1.05);
+                box-shadow: 13px 13px 100px #969696,
+                           -13px -13px 100px #ffffff;
+              }
+            </style>
+
+            </div>
+
+            <br>
+            <div>
+
+              <input type="text" autocomplete="off" name="regex" class="input" placeholder="Regular Expression">
+
+
+              <style> 
+                .input {
+                border: none;
+                outline: none;
+                color=#fff;
+                border-radius: 15px;
+                padding: 3em;
+                width:400px;
+                background-color: #34495E  ;
+                box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+                transition: 300ms ease-in-out;
+              }
+              
+              .input:focus {
+                background-color: white;
+                transform: scale(1.05);
+                box-shadow: 13px 13px 100px #969696,
+                           -13px -13px 100px #ffffff;
+              }
+            </style>
+            </div>
+            <br>
+            <div>
+                <button>Submit</button>
+
+                <style>
+
+                  button {
+                    color: #090909;
+                    padding: 0.5em 1em;
+                    font-size: 18px;
+                    border-radius: 0.5em;
+                    background: #e8e8e8;
+                    border: 1px solid #e8e8e8;
+                    transition: all .3s;
+                    box-shadow: 6px 6px 12px #c5c5c5,
+                               -6px -6px 12px #ffffff;
+                  }
+                  
+                  button:hover {
+                    border: 1px solid white;
+                  }
+                  
+                  button:active {
+                    box-shadow: 4px 4px 12px #c5c5c5,
+                               -4px -4px 12px #ffffff;
+                  }
+
+                </style>
+
+            </div>
+        </form>
+        <br>
+        <div>
+            {% if matches %}
+            <h2>All matches information</h2>
+            {% for match in matches %}
+            {{ match }}
+            {% endfor %}
+            {% else %}
+            <h4>No Match found...</h4>
+            {% endif %}
+        </div>
+        <br>
+        <div>
+            {% if count %}
+            <h2>Total {{ count }} Matches</h2>
+            {% endif %}
+        </div>
+    
+    <script src="" async defer></script>
+  </body>
+</center>
+
+</html>
