@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %}    
+    Home
+{% endblock %}
+
+{% block content %}    
+
+<center>
+<form action="{{ url_for('home')}}" method="post">
+    <tr></tr><td><h3 style="font-size: 2em;">1TAP Link Shortner</h3></td></tr>
+    <br><tr><td><input type="text" name="url" autocomplete= 'off' style="border-radius:15px; border :0; width:300px; outline-offset: 3px; padding: 15px 1.5rem; transition: 0.25s;" placeholder="Insert URL here" title="Original URL"></td></tr></br>
+    <br><tr><td><input type="submit" style= 'padding: 0.4em 0.7em; border: transparent; width:100px; background: black;color: white;border-radius: 4px;'value="Shorten"></td></tr><br>
+    <tr>
+        <td>
+        {% if error==0 %}
+        <br><a href=http://127.0.0.1:5000/{{final}}><input style="font-size:11.5px; border-radius:15px; border:0; width:130px; padding: 0.8rem 2rem;" type="text" value="http://127.0.0.1:5000/{{final}}" title="Short URL" id="myInput" readonly></a></br>
+        {% elif error==1 %}
+        
+        <div class="alert alert-danger" role="alert" style="position:fixed; left: 0px; width: 100%;">
+         not a valid url!!!
+        </div>
+        {% endif %}
+        </td>
+    </tr>
+</form>
+</center>
+{% endblock %}

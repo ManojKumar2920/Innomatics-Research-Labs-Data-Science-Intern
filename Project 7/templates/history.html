@@ -1,0 +1,24 @@
+{%extends 'layout.html'%}
+{%block title%}
+History
+{%endblock%}
+
+{%block content%}
+<center>
+<h1>Previous URLs</h1>
+<table align="center" style="font-family : Open sans;  padding :2px solid black; border :3px solid black; align=center;width: 10px;">
+    <tr bgcolor="lightgrey">
+        <th style="font-size: 25px; background-color: orange;">Original Url</th>
+        <th style="font-size: 25px; background-color: orange;">Shorten Url</th>
+        <th style="font-size: 25px; background-color: orange;"></th>
+    </tr>
+    {% for i in history %}
+    <tr>
+        <td><a href={{i.long}}>{{i.long}}</a></td>
+        <td><a href=http://127.0.0.1:5000/{{i.short}}>http://127.0.0.1:5000/{{i.short}}</a></td>
+        <td><a href="/delete/{{i.id}}">DELETE</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</center>
+{%endblock%}
